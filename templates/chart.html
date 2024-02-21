@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chart with Real-time Counter</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
+</head>
+<body>
+    <canvas id="myChart"></canvas>
+    <button id="incrementBtn">+1</button>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let lastCount = null; // Variable to store the last known count
+
+            const ctx = document.getElementById('myChart').getContext('2d');
+            const chart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    datasets: [{
+                        label: 'Counter',
+                        backgroundColor: 'rgb(255, 99, 132)',
+                        borderColor: 'rgb(255, 99, 132)',
+                        fill: false,
+                        data: []
+                    }]
+                },
+                options: {
+                    scales: {
+                        x: {
+                            type: 'time',
+                            time: {
+                                tooltipFormat: 'HH:mm:ss',
+                                displayFormats: {
+                                    second: 'HH:mm:ss'
+                                }
+                            },
+                            title: {
+                                display: true,
+                                text: 'Time'
+                            }
+                        },
+                        y: {
+                            beginAtZero: true,
+                            title: {
+                                display: true,
+                                text: 'Counter'
+                            }
+                        }
+                    },
+                    plugins: {
+                        legend: {
+                            display: true,
+                        }
+                    }
+                }
+            });
+
+            document.getElementById('incrementBtn').addEventListener('click', function () {
+                axios.post('/post')
+                    .then(function () {
+                        updateChartData(); // Update chart data on button press
+                    })
+                    .catch(function (error) {
+                console.error('Error:', error);
+                });
+            });
+
+            function updateChartData() {
+                axios.get('/data')
+                    .then(function (response) {
+                        const data = response.data;
+                        if(data.count !== lastCount) { // Check if the count has changed
+                            const newTime = new Date().toISOString();
+                            chart.data.datasets.forEach((dataset) => {
+                                dataset.data.push({
+                                    x: newTime,
+                                    y: data.count
+                                });
+                            });
+                            chart.update();
+                            lastCount = data.count; // Update the last known count
+                        }
+                    })
+                    .catch(function (error) {
+                        console.error('Error:', error);
+                    });
+            }
+
+            setInterval(updateChartData, 1000); // Periodically check for updates
+        });
+    </script>
+</body>
+</html>

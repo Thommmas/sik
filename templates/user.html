@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title>
+</head>
+<body>
+    <h2>Register User</h2>
+    <input type="text" id="username" placeholder="Enter your username">
+    <button onclick="registerUser()">Register</button>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script>
+        function registerUser() {
+            const username = document.getElementById('username').value;
+            axios.post('/register', { username: username })
+                .then(response => {
+                    if(response.data.success) {
+                        alert("User registered. Please go back to the main page.");
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>
