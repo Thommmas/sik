@@ -8,7 +8,6 @@
 </head>
 <body>
     <canvas id="myChart"></canvas>
-    <button id="incrementBtn">+1</button>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
             let lastCount = null; // Variable to store the last known count
@@ -54,16 +53,6 @@
                         }
                     }
                 }
-            });
-
-            document.getElementById('incrementBtn').addEventListener('click', function () {
-                axios.post('/post')
-                    .then(function () {
-                        updateChartData(); // Update chart data on button press
-                    })
-                    .catch(function (error) {
-                console.error('Error:', error);
-                });
             });
 
             function updateChartData() {

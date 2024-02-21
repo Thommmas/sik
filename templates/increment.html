@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Increment Counter</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h2>Increment Counter</h2>
+    <button id="incrementBtn">+1</button>
+
+    <script>
+        document.getElementById('incrementBtn').addEventListener('click', function() {
+            axios.post('/increment')
+            
+                .catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
