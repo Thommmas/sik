@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Chart for Multiple Users</title>
+    <meta charset="UTF-8">
+    <title>Electrokot Sik</title>
+    <link rel="stylesheet" href="../static/style.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
@@ -17,6 +19,17 @@
                 datasets: []
             },
             options: {
+                plugins: {  // 'legend' now within object 'plugins {}'
+                    legend: {
+                        labels: {
+                            color: "red",  // not 'fontColor:' anymore
+                            // fontSize: 18  // not 'fontSize:' anymore
+                            font: {
+                                size: 28 // 'size' now within object 'font {}'
+                            }
+                        }
+                    }
+                },
                 scales: {
                     x: {
                         type: 'time',
@@ -30,13 +43,34 @@
                         title: {
                             display: true,
                             text: 'Time'
-                        }
+                        },
+                        ticks: {
+                            color: 'rgba(255, 202, 0, 0.8)', // not 'fontColor:' anymore
+                            // fontSize: 18,
+                            font: {
+                                size: 10, // 'size' now within object 'font {}'
+                            },
+                        },
                     },
                     y: {
                         beginAtZero: true,
                         title: {
                             display: true,
                             text: 'Count'
+                        },
+                        grid: {
+                        color: 'rgba(255, 200, 0, 0)',
+                        borderColor: 'red'
+                        },
+                        ticks: {
+                            color: 'rgba(255, 202, 0, 0.8)',
+                            // fontSize: 18,
+                            font: {
+                                size: 15, // 'size' now within object 'font {}'
+                            },
+                        },
+                        grid: {
+                            color: 'rgba(255, 202, 0, 0.8)'
                         }
                     }
                 },
@@ -61,7 +95,7 @@
                                 borderColor: getRandomColor(),
                                 fill: false,
                                 data: [],
-                                tension: 0.5
+                                tension: 0.2
                             };
                             chart.data.datasets.push(dataset);
                         }

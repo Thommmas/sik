@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Increment Counter</title>
+    <meta charset="UTF-8">
+    <title>Electrokot Sik</title>
+    <link rel="stylesheet" href="../static/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 <body>
-    <h2>Increment Counter</h2>
-    Username: <input type="text" id="username"><br>
-    <button id="incrementBtn">+1</button>
+
+    <div class="code-area">
+        <span style="color:#d65562;">
+            Increment Counter
+        </span>	
+        <span>
+          <span style="text-align: center;color:#2796ec">
+            Username: <input type="text" id="username"><br>
+          </span>
+          <span style="text-align: center;color: #a6a61f">
+            <button id="incrementBtn">+1</button>
+          </span>   
+        </span>
+      </div>  
 
     <script>
         document.getElementById('incrementBtn').addEventListener('click', function() {
@@ -19,5 +33,6 @@
                 .catch(error => console.error('Error:', error));
         });
     </script>
+
 </body>
 </html>
