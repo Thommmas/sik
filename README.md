@@ -1,35 +1,37 @@
-# Beer Counter Website
+# Site de Comptage de Bières
 
 ## Description
-This web application allows users to track and visualize the number of beers consumed in real time. It features a simple user interface for incrementing the beer count and a dynamic chart that updates to reflect the latest counts.
+Cette application web permet aux utilisateurs de suivre et de visualiser en temps réel le nombre de bières consommées. Elle propose une interface simple pour incrémenter le nombre de bières et un graphique dynamique qui se met à jour pour refléter les derniers comptages.
 
-## How It Works
-- **Increment Page (`increment.html`)**: Users can increase the beer count by entering their username and clicking the '+1' button.
-- **Chart Page (`chart.html`)**: Displays a real-time line chart showing the beer counts over time for each user.
+## Fonctionnement
+- **Page d'Incrémentation (`increment.html`)** : Les utilisateurs peuvent augmenter le compteur de bières en entrant leur nom d'utilisateur et en cliquant sur le bouton '+1'.
+- **Page du Graphique (`chart.html`)** : Affiche un graphique en ligne en temps réel qui montre les comptes de bières au fil du temps pour chaque utilisateur.
 
-## Setup and Installation
+## Installation et Configuration
 
-### Requirements
-- A modern web browser with JavaScript enabled.
-- Backend setup that supports POST requests for incrementing and GET requests for fetching data (not provided here).
+### Prérequis
+- Un navigateur web moderne avec JavaScript activé.
+- Configuration du backend qui supporte les requêtes POST pour l'incrémentation et les requêtes GET pour la récupération des données (non fournie ici).
 
-### Running the Application
-1. Ensure that your server backend is running and properly connected to serve the `.html` files.
-2. Open `increment.html` to increment the beer count.
-3. Open `chart.html` to view the live chart of the beer counts.
+### Lancement de l'Application
+1. Assurez-vous que votre backend de serveur est en fonctionnement et correctement connecté pour servir les fichiers `.html`.
+2. Ouvrez `increment.html` pour incrémenter le compteur de bières.
+3. Ouvrez `chart.html` pour voir le graphique en direct des comptes de bières.
+4. Pour démarrer facilement l'application, double-cliquez sur `run.bat` ou exécutez-le depuis l'invite de commande pour lancer le serveur web localement.
 
-## Files Included
-- `increment.html`: Web page for users to increment the beer count.
-- `chart.html`: Web page displaying the live chart of beer counts.
-- `style.css`: Contains the CSS styles for the application.
-- `increment.css`: Specific styles for the increment page.
+## Fichiers Inclus
+- `increment.html` : Page web pour les utilisateurs pour incrémenter le compteur de bières.
+- `chart.html` : Page web qui affiche le graphique en direct des comptes de bières.
+- `style.css` : Contient les styles CSS pour l'application.
+- `increment.css` : Styles spécifiques pour la page d'incrémentation.
+- `run.bat` : Script Batch pour lancer facilement le serveur web.
 
-## Additional Information
-- Ensure that CORS policies are correctly set to allow resource sharing if your backend and frontend are served from different origins.
-- This application uses Chart.js for the graphs and Axios for HTTP requests.
+## Informations Complémentaires
+- Assurez-vous que les politiques CORS sont correctement configurées pour permettre le partage de ressources si votre backend et votre frontend sont servis depuis des origines différentes.
+- Cette application utilise Chart.js pour les graphiques et Axios pour les requêtes HTTP.
 
 ## Support
-For any additional help or to report issues, please open an issue on the repository or contact the admin.
+Pour toute aide supplémentaire ou pour signaler des problèmes, veuillez ouvrir un problème dans le dépôt ou contacter l'administrateur.
 
-## License
-This project is licensed under the MIT License - see the LICENSE.md file for details.
+## Licence
+Ce projet est sous licence MIT - voir le fichier LICENSE.md pour les détails.
