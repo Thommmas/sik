@@ -1,26 +1,35 @@
-# Compteur de Bières
+# Beer Counter Website
 
-Bienvenue sur le Compteur de Bières, un site web simple pour suivre en temps réel le nombre de bières consommées.
+## Description
+This web application allows users to track and visualize the number of beers consumed in real time. It features a simple user interface for incrementing the beer count and a dynamic chart that updates to reflect the latest counts.
 
-## Fonctionnalités
+## How It Works
+- **Increment Page (`increment.html`)**: Users can increase the beer count by entering their username and clicking the '+1' button.
+- **Chart Page (`chart.html`)**: Displays a real-time line chart showing the beer counts over time for each user.
 
-- **Incrémenter le Compteur :** Les utilisateurs peuvent augmenter le compteur chaque fois qu'une bière est consommée en accédant à `increment.html`.
-- **Voir les Statistiques :** Les utilisateurs peuvent voir des graphiques détaillés du nombre de bières consommées sur `chart.html`.
+## Setup and Installation
 
-## Comment ça marche ?
+### Requirements
+- A modern web browser with JavaScript enabled.
+- Backend setup that supports POST requests for incrementing and GET requests for fetching data (not provided here).
 
-### Incrémenter le compteur
+### Running the Application
+1. Ensure that your server backend is running and properly connected to serve the `.html` files.
+2. Open `increment.html` to increment the beer count.
+3. Open `chart.html` to view the live chart of the beer counts.
 
-Pour ajouter une bière au compteur, visitez la page `increment.html` et cliquez sur le bouton prévu à cet effet. Chaque clic augmentera le compteur de un.
+## Files Included
+- `increment.html`: Web page for users to increment the beer count.
+- `chart.html`: Web page displaying the live chart of beer counts.
+- `style.css`: Contains the CSS styles for the application.
+- `increment.css`: Specific styles for the increment page.
 
-### Voir les graphiques
+## Additional Information
+- Ensure that CORS policies are correctly set to allow resource sharing if your backend and frontend are served from different origins.
+- This application uses Chart.js for the graphs and Axios for HTTP requests.
 
-Les graphiques qui montrent le nombre total de bières consommées et d'autres statistiques intéressantes peuvent être consultés sur `chart.html`. Les graphiques sont mis à jour en temps réel.
+## Support
+For any additional help or to report issues, please open an issue on the repository or contact the admin.
 
-## Installation
-
-Pour mettre en place ce site sur votre propre serveur, suivez les étapes ci-dessous :
-
-1. Clonez le dépôt :
-   ```bash
-   git clone [URL_DU_DÉPÔT]
+## License
+This project is licensed under the MIT License - see the LICENSE.md file for details.
