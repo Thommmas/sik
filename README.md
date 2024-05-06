@@ -1,11 +1,11 @@
-# Site de Comptage de Bières
+# Graphique participatif
 
 ## Description
-Cette application web permet aux utilisateurs de suivre et de visualiser en temps réel le nombre de bières consommées. Elle propose une interface simple pour incrémenter le nombre de bières et un graphique dynamique qui se met à jour pour refléter les derniers comptages.
+Cette application web permet aux utilisateurs de suivre et de visualiser en temps réel le nombre de verres consommés. Elle propose une interface simple pour incrémenter le nombre de verres et un graphique dynamique qui se met à jour pour refléter les derniers comptages.
 
 ## Fonctionnement
-- **Page d'Incrémentation (`increment.html`)** : Les utilisateurs peuvent augmenter le compteur de bières en entrant leur nom d'utilisateur et en cliquant sur le bouton '+1'.
-- **Page du Graphique (`chart.html`)** : Affiche un graphique en ligne en temps réel qui montre les comptes de bières au fil du temps pour chaque utilisateur.
+- **Page d'Incrémentation (`increment.html`)** : Les utilisateurs peuvent augmenter le compteur de verres en entrant leur nom d'utilisateur et en cliquant sur le bouton '+1'.
+- **Page du Graphique (`chart.html`)** : Affiche un graphique en ligne en temps réel qui montre les comptes de verres au fil du temps pour chaque utilisateur.
 
 ## Installation et Configuration
 
@@ -15,13 +15,13 @@ Cette application web permet aux utilisateurs de suivre et de visualiser en temp
 
 ### Lancement de l'Application
 1. Assurez-vous que votre backend de serveur est en fonctionnement et correctement connecté pour servir les fichiers `.html`.
-2. Ouvrez `increment.html` pour incrémenter le compteur de bières.
-3. Ouvrez `chart.html` pour voir le graphique en direct des comptes de bières.
+2. Ouvrez `increment.html` pour incrémenter le compteur de verres.
+3. Ouvrez `chart.html` pour voir le graphique en direct des comptes de verres.
 4. Pour démarrer facilement l'application, double-cliquez sur `run.bat` ou exécutez-le depuis l'invite de commande pour lancer le serveur web localement.
 
 ## Fichiers Inclus
-- `increment.html` : Page web pour les utilisateurs pour incrémenter le compteur de bières.
-- `chart.html` : Page web qui affiche le graphique en direct des comptes de bières.
+- `increment.html` : Page web pour les utilisateurs pour incrémenter le compteur de verres.
+- `chart.html` : Page web qui affiche le graphique en direct des comptes de verres.
 - `style.css` : Contient les styles CSS pour l'application.
 - `increment.css` : Styles spécifiques pour la page d'incrémentation.
 - `run.bat` : Script Batch pour lancer facilement le serveur web.
